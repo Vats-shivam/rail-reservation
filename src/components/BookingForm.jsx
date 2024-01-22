@@ -41,7 +41,7 @@ function BookingForm(props) {
   else{
     travelRate=200;
   }
-  fare=travelRate*(stations.indexOf(destination)-stations.indexOf(source))
+  fare=travelRate*Math.abs(stations.indexOf(destination)-stations.indexOf(source))
     // Handle form submission logic here
     console.log('Form submitted:', { source, destination, travelClass ,selectedDate,fare});
     props.setDetails({source,destination,travelClass,selectedDate,fare});
